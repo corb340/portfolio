@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio de Martin Springett — cybersécurité, réseaux, systèmes et Blue Team.">
+  <title>MS340 — IT & Cyber Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="background-grid" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#accueil" aria-label="Accueil">
+        <span class="brand-mark">M</span>
+        <span>
+          <strong>MS340</strong>
+          <small>IT &amp; Cyber Portfolio</small>
+        </span>
+      </a>
+
+      <button class="menu-button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a class="active" href="#accueil">Accueil</a>
+        <a href="#apropos">À propos</a>
+        <a href="#competences">Compétences</a>
+        <a href="#realisations">Réalisations</a>
+        <a href="#laboratoire">Laboratoire</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="social-links">
+        <a href="https://github.com/corb340" target="_blank" rel="noreferrer" aria-label="GitHub">GH</a>
+        <a href="#" aria-label="LinkedIn">in</a>
+        <a href="mailto:contact@example.com" aria-label="E-mail">@</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="kicker">CYBERSÉCURITÉ <b>•</b> RÉSEAUX <b>•</b> SYSTÈMES <b>•</b> BLUE TEAM</p>
+
+          <h1>
+            <span>MARTIN</span>
+            <strong>SPRINGETT</strong>
+          </h1>
+
+          <p class="lead">
+            Junior diplômé en sécurité informatique (bac+5), avec 2 ans d’expérience
+            en environnement professionnel. Orienté Blue Team, réseau et défense des systèmes.
+          </p>
+
+          <div class="actions">
+            <a class="button primary" href="#apropos">Découvrir mon parcours <span>→</span></a>
+            <a class="button secondary" href="#realisations">Voir mes réalisations <span>→</span></a>
+          </div>
+
+          <div class="quick-facts">
+            <article>
+              <span class="fact-icon">▣</span>
+              <div><strong>2 ANS</strong><small>D’expérience<br>Réseaux &amp; Cybersécurité</small></div>
+            </article>
+            <article>
+              <span class="fact-icon">◇</span>
+              <div><strong>BAC+5</strong><small>Sécurité informatique<br>Titre RNCP niveau 7</small></div>
+            </article>
+            <article>
+              <span class="fact-icon">⬡</span>
+              <div><strong>4+</strong><small>Certifications<br>obtenues</small></div>
+            </article>
+            <article>
+              <span class="fact-icon">&lt;/&gt;</span>
+              <div><strong>LABS</strong><small>Réseau, SOC,<br>DFIR &amp; automatisation</small></div>
+            </article>
+          </div>
+        </div>
+
+        <div class="hero-photo" aria-label="Portrait de Martin Springett">
+          <div class="mesh" aria-hidden="true"></div>
+          <div class="halo" aria-hidden="true"></div>
+          <img src="assets/martin-portrait.png" alt="Martin Springett">
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="laboratoire">
+      <div class="container">
+        <article class="featured-card">
+          <div class="featured-copy">
+            <p class="section-label">PROJET À LA UNE</p>
+            <h2>Infrastructure réseau<br>&amp; cybersécurité</h2>
+
+            <div class="stack">
+              <span>EVE-NG</span><i>•</i><span>Cisco IOS</span><i>•</i>
+              <span>OPNsense</span><i>•</i><span>Windows Server</span>
+            </div>
+
+            <p class="featured-text">
+              Conception et déploiement d’une infrastructure segmentée :
+              VLAN, routage inter-VLAN, trunks 802.1Q, services AD/DNS/DHCP,
+              filtrage OPNsense et intégration d’un environnement de supervision.
+            </p>
+
+            <a class="button secondary" href="laboratoire.html">Explorer le projet <span>→</span></a>
+          </div>
+
+          <div class="topology" aria-label="Topologie simplifiée du laboratoire">
+            <span class="project-number">01 <small>/ LAB</small></span>
+
+            <svg viewBox="0 0 720 420" role="img" aria-label="Schéma du laboratoire">
+              <defs>
+                <filter id="glow">
+                  <feGaussianBlur stdDeviation="3" result="blur"/>
+                  <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+              </defs>
+
+              <g class="links normal">
+                <path d="M360 40 V92"/>
+                <path d="M360 138 V186"/>
+                <path d="M444 114 H585"/>
+                <path d="M448 210 H565"/>
+              </g>
+
+              <g class="links trunk" filter="url(#glow)">
+                <path d="M335 230 L225 300"/>
+                <path d="M385 230 L495 300"/>
+                <path d="M250 320 H470"/>
+              </g>
+
+              <g class="nodes">
+                <rect x="310" y="18" width="100" height="42" rx="11"/>
+                <text x="360" y="44">INTERNET</text>
+
+                <rect class="orange" x="285" y="92" width="150" height="48" rx="10"/>
+                <text x="360" y="114">OPNsense-EDGE</text>
+                <text class="sub" x="360" y="130">FIREWALL</text>
+
+                <rect x="285" y="186" width="150" height="52" rx="10"/>
+                <text x="360" y="207">MLS-DIS (L3)</text>
+                <text class="sub blue" x="360" y="226">INTER-VLAN ROUTING</text>
+
+                <rect x="145" y="292" width="160" height="56" rx="10"/>
+                <text x="225" y="315">SW-ACC1 (L2)</text>
+                <text class="sub" x="225" y="334">ACCESS SWITCH</text>
+
+                <rect x="415" y="292" width="160" height="56" rx="10"/>
+                <text x="495" y="315">SW-ACC2 (L2)</text>
+                <text class="sub" x="495" y="334">ACCESS SWITCH</text>
+
+                <rect class="purple" x="560" y="86" width="135" height="58" rx="10"/>
+                <text x="627" y="110">WEB &amp; MAIL</text>
+                <text class="sub" x="627" y="128">172.16.100.10</text>
+
+                <rect x="565" y="180" width="130" height="58" rx="10"/>
+                <text x="630" y="204">WINDOWS AD</text>
+                <text class="sub" x="630" y="222">172.16.100.20</text>
+
+                <rect class="green" x="112" y="372" width="150" height="38" rx="9"/>
+                <text x="187" y="395">VLAN 10 · RH</text>
+                <rect class="orange2" x="285" y="372" width="150" height="38" rx="9"/>
+                <text x="360" y="395">VLAN 20 · R&amp;D</text>
+                <rect class="bluebox" x="458" y="372" width="150" height="38" rx="9"/>
+                <text x="533" y="395">VLAN 30 · IT</text>
+              </g>
+
+              <g class="vlan-links">
+                <path class="green-stroke" d="M225 348 V372"/>
+                <path class="orange-stroke" d="M250 348 C250 360 360 354 360 372"/>
+                <path class="blue-stroke" d="M495 348 V372"/>
+              </g>
+
+              <text class="trunk-label" x="173" y="263">802.1Q</text>
+              <text class="trunk-label" x="492" y="263">802.1Q</text>
+              <text class="trunk-label" x="337" y="307">802.1Q</text>
+            </svg>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="apropos">
+      <div class="container cards">
+        <article class="card">
+          <div class="card-heading"><span class="cyan">▣</span><h3>EXPÉRIENCE</h3></div>
+          <div class="experience-row">
+            <div class="sfr">SFR</div>
+            <div>
+              <strong>SFR Business</strong>
+              <p>Ingénieur Avant-Vente Réseaux &amp; Cybersécurité</p>
+              <small>Alternance — 24 mois</small>
+            </div>
+          </div>
+          <p>
+            Projets réseaux et sécurité : firewall, SD-WAN, SASE, Wi-Fi,
+            POC Fortinet, schémas d’architecture et analyses techniques.
+          </p>
+          <a href="experience.html">Voir mon parcours →</a>
+        </article>
+
+        <article class="card">
+          <div class="card-heading"><span class="violet">◉</span><h3>CERTIFICATIONS</h3></div>
+          <ul class="list">
+            <li><i></i>eJPT <small>INE</small></li>
+            <li><i></i>PJPT <small>TCM Security</small></li>
+            <li><i></i>PJMR <small>TCM Security</small></li>
+            <li><i></i>Fortinet Certified Fundamentals</li>
+            <li class="muted"><i></i>En préparation : CCNA, Security+</li>
+          </ul>
+          <a class="violet-link" href="certifications.html">Voir toutes mes certifications →</a>
+        </article>
+
+        <article class="card" id="competences">
+          <div class="card-heading"><span class="lime">&lt;/&gt;</span><h3>COMPÉTENCES CLÉS</h3></div>
+          <div class="tags">
+            <span>SIEM — Splunk, ELK, Wazuh</span>
+            <span>Réseau — Cisco, Wireshark, Zeek</span>
+            <span>Forensics — Volatility, Autopsy</span>
+            <span>Scripting — Python, PowerShell, Bash</span>
+            <span>Windows / Linux</span>
+            <span>OPNsense</span>
+          </div>
+          <a href="competences.html">Voir toutes mes compétences →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section small" id="realisations">
+      <div class="container tools">
+        <strong>TECHNOLOGIES<br>&amp; OUTILS</strong>
+        <span>CISCO</span>
+        <span>OPNsense</span>
+        <span>WINDOWS</span>
+        <span>LINUX</span>
+        <span>splunk&gt;</span>
+        <span>WAZUH</span>
+        <span>PYTHON</span>
+        <span>PowerShell</span>
+        <small>et bien d’autres…</small>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="container">© 2026 MS340 — Tous droits réservés.</div>
+  </footer>
+
+  <script>
+    const btn = document.querySelector('.menu-button');
+    const menu = document.querySelector('.nav-links');
+    btn?.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  </script>
+</body>
+</html>
