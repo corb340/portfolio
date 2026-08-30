@@ -142,8 +142,13 @@ h1 strong{margin-top:11px;color:#1687ff;font-weight:800}
 .quick-facts small{display:block;margin-top:5px;color:var(--muted);font-size:11px;line-height:1.45}
 
 .hero-photo{
-  align-self:stretch;min-height:560px;position:relative;
-  display:flex;align-items:flex-end;justify-content:center;overflow:hidden;
+  align-self:stretch;
+  min-height:600px;
+  position:relative;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  overflow:hidden;
 }
 .hero-photo::before{
   content:"";position:absolute;width:520px;height:520px;border-radius:50%;
@@ -175,9 +180,41 @@ h1 strong{margin-top:11px;color:#1687ff;font-weight:800}
   background-size:180px 125px;
 }
 .hero-photo img{
-  position:relative;z-index:3;
-  max-height:545px;width:auto;
-  filter:drop-shadow(0 28px 50px rgba(0,0,0,.55));
+  position:absolute;
+  z-index:3;
+
+  left:50%;
+  bottom:-48px;
+  transform:translateX(-50%);
+
+  height:590px;
+  width:auto;
+  max-width:none;
+  object-fit:contain;
+
+  /* Évite la coupure nette du torse : le bas disparaît naturellement */
+  -webkit-mask-image:linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 72%,
+    rgba(0,0,0,.98) 78%,
+    rgba(0,0,0,.82) 84%,
+    rgba(0,0,0,.42) 91%,
+    transparent 100%
+  );
+  mask-image:linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 72%,
+    rgba(0,0,0,.98) 78%,
+    rgba(0,0,0,.82) 84%,
+    rgba(0,0,0,.42) 91%,
+    transparent 100%
+  );
+
+  filter:
+    drop-shadow(0 30px 48px rgba(0,0,0,.48))
+    drop-shadow(0 0 18px rgba(18,128,220,.08));
 }
 
 /* Sections / project */
@@ -289,16 +326,22 @@ footer{padding:18px 0 36px;color:#718293;text-align:center;font-size:12px}
   .nav-links a{height:46px;padding:0 12px}
   .nav-links a.active::after{display:none}
   .hero-grid{grid-template-columns:1fr}
-  .hero-photo{order:-1;min-height:420px}
-  .hero-photo img{max-height:410px}
+  .hero-photo{order:-1;min-height:440px}
+  .hero-photo img{
+    height:450px;
+    bottom:-36px;
+  }
   .hero-photo .halo{right:50%;transform:translateX(50%);width:300px;height:300px}
   .cards{grid-template-columns:1fr}
 }
 @media(max-width:620px){
   .brand small{display:none}
   .social-links{display:none}
-  .hero-photo{min-height:340px}
-  .hero-photo img{max-height:335px}
+  .hero-photo{min-height:360px}
+  .hero-photo img{
+    height:365px;
+    bottom:-28px;
+  }
   .hero-photo .halo{width:250px;height:250px}
   h1{font-size:49px}
   .lead{font-size:15px}
