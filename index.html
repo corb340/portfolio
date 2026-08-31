@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portfolio de Martin Springett — cybersécurité, réseaux, systèmes et Blue Team.">
+  <meta name="description" content="Portfolio de Martin Springett — cybersécurité, réseaux, systèmes et infrastructure.">
   <title>MS340 — IT & Cyber Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,9 +35,9 @@
       </nav>
 
       <div class="social-links">
-        <a href="https://github.com/corb340" target="_blank" rel="noreferrer" aria-label="GitHub">GH</a>
-        <a href="#" aria-label="LinkedIn">in</a>
-        <a href="mailto:contact@example.com" aria-label="E-mail">@</a>
+        <!--<a href="https://github.com/corb340" target="_blank" rel="noreferrer" aria-label="GitHub">GH</a>-->
+        <a href="https://www.linkedin.com/in/martin-springett/" aria-label="LinkedIn">in</a>
+        <a href="mailto:martin.springett@protonmail.com" aria-label="E-mail">@</a>
       </div>
     </div>
   </header>
@@ -46,7 +46,7 @@
     <section class="hero" id="accueil">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="kicker">CYBERSÉCURITÉ <b>•</b> RÉSEAUX <b>•</b> SYSTÈMES <b>•</b> BLUE TEAM</p>
+          <p class="kicker">CYBERSÉCURITÉ <b>•</b> RÉSEAUX <b>•</b> SYSTÈMES <b>•</b> INFRASTRUCTURE </p>
 
           <h1>
             <span>MARTIN</span>
@@ -54,8 +54,7 @@
           </h1>
 
           <p class="lead">
-            Junior diplômé en sécurité informatique (bac+5), avec 2 ans d’expérience
-            en environnement professionnel. Orienté Blue Team, réseau et défense des systèmes.
+            Junior diplômé en sécurité informatique (bac+5), avec 2 ans d’expérience en environnement professionnel, souhaitant développer son expertise en cybersécurité, réseaux sans fil et cloud computing.
           </p>
 
           <div class="actions">
@@ -104,7 +103,7 @@
             </div>
 
             <p class="featured-text">
-              Conception et déploiement d’une infrastructure segmentée :
+              Conception et déploiement d’une infrastructure entreprise :
               VLAN, routage inter-VLAN, trunks 802.1Q, services AD/DNS/DHCP,
               filtrage OPNsense et intégration d’un environnement de supervision.
             </p>
@@ -115,7 +114,7 @@
           <div class="topology" aria-label="Topologie simplifiée du laboratoire">
             <span class="project-number">01 <small>/ LAB</small></span>
 
-            <svg viewBox="0 0 720 420" role="img" aria-label="Schéma du laboratoire">
+            <svg viewBox="0 0 720 420" role="img" aria-label="Schéma simplifié du laboratoire avec SOC on-cloud et tunnel IPSec">
               <defs>
                 <filter id="glow">
                   <feGaussianBlur stdDeviation="3" result="blur"/>
@@ -124,21 +123,31 @@
               </defs>
 
               <g class="links normal">
-                <path d="M360 40 V92"/>
-                <path d="M360 138 V186"/>
-                <path d="M444 114 H585"/>
-                <path d="M448 210 H565"/>
+                <path d="M360 60 V92"/>
+                <path d="M410 39 H555"/>
+                <path d="M360 140 V186"/>
+                <path d="M435 116 H560"/>
+                <path d="M435 212 H565"/>
               </g>
 
+              <g class="links vpn" filter="url(#glow)">
+                <path d="M435 104 C485 78 510 63 555 62"/>
+              </g>
+              <text class="vpn-label" x="500" y="78">IPSec</text>
+
               <g class="links trunk" filter="url(#glow)">
-                <path d="M335 230 L225 300"/>
-                <path d="M385 230 L495 300"/>
+                <path d="M335 238 L225 300"/>
+                <path d="M385 238 L495 300"/>
                 <path d="M250 320 H470"/>
               </g>
 
               <g class="nodes">
                 <rect x="310" y="18" width="100" height="42" rx="11"/>
                 <text x="360" y="44">INTERNET</text>
+
+                <rect class="purple" x="555" y="18" width="140" height="54" rx="10"/>
+                <text x="625" y="41">SOC</text>
+                <text class="sub violet-text" x="625" y="58">ON-CLOUD</text>
 
                 <rect class="orange" x="285" y="92" width="150" height="48" rx="10"/>
                 <text x="360" y="114">OPNsense-EDGE</text>
@@ -156,13 +165,14 @@
                 <text x="495" y="315">SW-ACC2 (L2)</text>
                 <text class="sub" x="495" y="334">ACCESS SWITCH</text>
 
-                <rect class="purple" x="560" y="86" width="135" height="58" rx="10"/>
+                <rect class="purple" x="560" y="88" width="135" height="62" rx="10"/>
                 <text x="627" y="110">WEB &amp; MAIL</text>
                 <text class="sub" x="627" y="128">172.16.100.10</text>
+                <text class="sub violet-text" x="627" y="143">DMZ</text>
 
-                <rect x="565" y="180" width="130" height="58" rx="10"/>
-                <text x="630" y="204">WINDOWS AD</text>
-                <text class="sub" x="630" y="222">172.16.100.20</text>
+                <rect x="565" y="182" width="130" height="58" rx="10"/>
+                <text x="630" y="206">WINDOWS AD</text>
+                <text class="sub" x="630" y="224">172.16.100.20</text>
 
                 <rect class="green" x="112" y="372" width="150" height="38" rx="9"/>
                 <text x="187" y="395">VLAN 10 · RH</text>
@@ -190,7 +200,7 @@
     <section class="section" id="apropos">
       <div class="container cards">
         <article class="card">
-          <div class="card-heading"><span class="cyan">▣</span><h3>EXPÉRIENCE</h3></div>
+          <div class="card-heading"><span class="cyan">▣</span><h3>DERNIÈRE EXPÉRIENCE</h3></div>
           <div class="experience-row">
             <div class="sfr">SFR</div>
             <div>
@@ -203,7 +213,7 @@
             Projets réseaux et sécurité : firewall, SD-WAN, SASE, Wi-Fi,
             POC Fortinet, schémas d’architecture et analyses techniques.
           </p>
-          <a href="experience.html">Voir mon parcours →</a>
+          <a href="experience.html">Voir mon parcours complet →</a>
         </article>
 
         <article class="card">
@@ -215,7 +225,7 @@
             <li><i></i>Fortinet Certified Fundamentals</li>
             <li class="muted"><i></i>En préparation : CCNA, Security+</li>
           </ul>
-          <a class="violet-link" href="certifications.html">Voir toutes mes certifications →</a>
+          <a class="violet-link" href="certifications.html">Voir plus de détails sur mes certifications →</a>
         </article>
 
         <article class="card" id="competences">
@@ -228,7 +238,7 @@
             <span>Windows / Linux</span>
             <span>OPNsense</span>
           </div>
-          <a href="competences.html">Voir toutes mes compétences →</a>
+          <a href="competences.html">Consulter toutes mes compétences →</a>
         </article>
       </div>
     </section>

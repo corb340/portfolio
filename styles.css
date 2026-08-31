@@ -244,6 +244,9 @@ h1 strong{margin-top:11px;color:#1687ff;font-weight:800}
 .nodes .blue{fill:#1cbaff}
 .links path,.vlan-links path{fill:none;stroke:#a6b7c7;stroke-width:2}
 .links.trunk path{stroke:#10bdf5;stroke-width:2.4;stroke-dasharray:8 7}
+.links.vpn path{fill:none;stroke:var(--violet);stroke-width:2.2;stroke-dasharray:7 6}
+.vpn-label{fill:#bd6cff;font:600 10px "JetBrains Mono",monospace;text-anchor:middle}
+.nodes .violet-text{fill:#bd6cff}
 .green-stroke{stroke:#6adb2e!important}
 .orange-stroke{stroke:#ff8500!important}
 .blue-stroke{stroke:#1688ff!important}
