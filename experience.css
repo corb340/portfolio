@@ -1,0 +1,217 @@
+/* experience.css — se charge APRES styles.css */
+.journey-page{overflow:hidden}
+.journey-hero{padding:56px 0 20px}
+.journey-hero-grid{min-height:255px;display:grid;grid-template-columns:.9fr 1.1fr;gap:54px;align-items:center}
+.journey-kicker{margin:0 0 22px;color:var(--cyan);font:600 12px/1.2 "JetBrains Mono",monospace}
+.journey-title{margin:0;font-size:clamp(48px,5.2vw,76px);line-height:.98;letter-spacing:-.045em}
+.journey-title span,.journey-title strong{display:block}.journey-title span{font-weight:800}.journey-title strong{margin-top:10px;color:#1688ff;font-weight:800}
+.journey-lead{max-width:560px;margin:24px 0 0;color:#c4ced8;font-size:17px;line-height:1.65}
+.journey-visual{min-height:250px;display:grid;place-items:center;position:relative}
+.journey-visual::before{content:"";position:absolute;inset:6% 2%;background:radial-gradient(circle at 60% 46%,rgba(22,136,255,.12),transparent 43%);filter:blur(8px)}
+.journey-visual svg{width:min(100%,560px);overflow:visible}.journey-grid-lines path{fill:none;stroke:rgba(30,103,172,.16);stroke-width:1}
+.journey-route{fill:none;stroke:url(#journey-line);stroke-width:2;stroke-dasharray:7 7}.journey-route-nodes circle{fill:#17c9ff;filter:drop-shadow(0 0 8px rgba(17,197,246,.85))}
+.journey-tech-card rect{fill:rgba(5,18,31,.92);stroke:rgba(22,136,255,.75);stroke-width:1}.journey-tech-card.cyan rect{stroke:#11c5f6;fill:rgba(4,34,52,.94)}.journey-tech-card.violet rect{stroke:#a75af5;fill:rgba(32,13,53,.82)}
+.journey-tech-card text{fill:#1688ff;text-anchor:middle;font:700 24px "JetBrains Mono",monospace}.journey-tech-card.cyan text{fill:#11c5f6}.journey-tech-card.violet text{fill:#bd6cff}
+
+.journey-intro-section{padding:18px 0 26px}
+.journey-intro-card{min-height:280px;padding:34px 40px;display:grid;grid-template-columns:74px minmax(0,1fr) 260px;gap:28px;align-items:start;border:1px solid rgba(17,197,246,.58);border-radius:14px;background:radial-gradient(circle at 88% 45%,rgba(0,135,255,.10),transparent 27%),linear-gradient(180deg,rgba(6,20,33,.94),rgba(3,14,24,.96));box-shadow:0 22px 65px rgba(0,0,0,.28);position:relative;overflow:hidden}
+.journey-question-icon{width:64px;height:64px;border:1px solid var(--cyan);border-radius:50%;display:grid;place-items:center;color:var(--cyan);font:700 34px "JetBrains Mono",monospace;box-shadow:0 0 24px rgba(17,197,246,.08)}
+.journey-intro-copy{position:relative;z-index:2}.journey-intro-copy h2{margin:0 0 13px;color:#20c5f5;font-size:20px;line-height:1.35}.journey-intro-copy h2 span{margin-right:7px;font-family:"JetBrains Mono",monospace}
+.journey-intro-copy p{max-width:800px;margin:0 0 10px;color:#bcc7d1;font-size:13px;line-height:1.62}
+.journey-intro-art{align-self:stretch;opacity:.62;background:radial-gradient(circle at 38% 70%,#11c5f6 0 2px,transparent 3px),radial-gradient(circle at 54% 55%,#1688ff 0 2px,transparent 3px),radial-gradient(circle at 68% 37%,#11c5f6 0 2px,transparent 3px),linear-gradient(35deg,transparent 48%,rgba(17,197,246,.20) 49%,rgba(17,197,246,.20) 50%,transparent 51%);background-size:auto,auto,auto,48px 34px;mask-image:linear-gradient(90deg,transparent 0%,black 28%,black 100%)}
+
+.journey-timeline-section{padding:6px 0 24px}.journey-section-head{min-height:54px;display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:10px}
+.journey-section-head h2{margin:0;font:500 17px "JetBrains Mono",monospace;letter-spacing:.04em}.journey-head-line{width:33px;height:2px;display:block;margin-top:9px;background:var(--cyan);box-shadow:0 0 12px rgba(17,197,246,.45)}
+.journey-legend{display:flex;gap:28px;padding-bottom:7px;color:#aebac6;font-size:12px}.journey-legend span{display:flex;align-items:center;gap:8px}.dot{width:10px;height:10px;border-radius:50%;display:inline-block}.dot.exp{background:#11c5f6}.dot.edu{background:#a75af5}.dot.cert{background:#8bed3f}
+
+.timeline{--date-col:185px;--axis-col:52px;position:relative}.timeline-row{display:grid;grid-template-columns:var(--date-col) var(--axis-col) minmax(0,1fr);position:relative}
+.timeline-date{padding:27px 20px 0 0;text-align:right;font-family:"JetBrains Mono",monospace}.timeline-date strong{display:block;font-size:15px;font-weight:500}.timeline-date small{display:block;margin-top:8px;color:#7e8e9e;font-size:10px;text-transform:uppercase}
+.timeline-axis{position:relative}.timeline-axis::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;transform:translateX(-50%);background:linear-gradient(180deg,rgba(150,174,194,.72),rgba(63,101,128,.45))}
+.timeline-node{position:absolute;z-index:3;top:32px;left:50%;width:17px;height:17px;transform:translate(-50%,-50%);border-radius:50%;background:#07131f;border:2px solid currentColor;box-shadow:0 0 0 5px rgba(17,197,246,.08),0 0 13px currentColor}
+.timeline-axis::after{content:"";position:absolute;top:32px;left:50%;width:27px;border-top:1px dotted currentColor;opacity:.58}
+.timeline-card{min-height:178px;margin:0 0 14px;padding:24px 24px 22px;display:grid;grid-template-columns:56px minmax(0,1fr) minmax(270px,.75fr);gap:20px;border:1px solid currentColor;border-radius:12px;background:radial-gradient(circle at 77% 25%,rgba(10,83,135,.08),transparent 33%),linear-gradient(180deg,rgba(6,20,33,.95),rgba(4,14,24,.96));box-shadow:0 14px 45px rgba(0,0,0,.20)}
+.timeline-icon{width:52px;height:52px;border:1px solid currentColor;border-radius:8px;display:grid;place-items:center;font:600 21px "JetBrains Mono",monospace;background:rgba(4,20,32,.65)}
+.timeline-type{width:max-content;display:inline-block;margin-bottom:7px;padding:5px 9px;border-radius:6px;background:color-mix(in srgb,currentColor 14%,transparent);color:currentColor;font:600 9px "JetBrains Mono",monospace}
+.timeline-content h3{margin:0;color:#f4f8fb;font-size:19px}.timeline-content h4{margin:5px 0 3px;color:currentColor;font-size:12px;font-weight:500}.timeline-content>small{color:#a1afbc;font-size:11px}.timeline-content p{max-width:600px;margin:12px 0 0;color:#aeb9c4;font-size:11px;line-height:1.58}
+.timeline-aside{min-width:0;display:grid;grid-template-columns:1fr auto;grid-template-rows:1fr auto;gap:12px;align-items:start}.timeline-tags{display:flex;flex-wrap:wrap;gap:8px;align-content:start;padding-top:16px}.timeline-tags span{min-width:70px;padding:6px 9px;border:1px solid color-mix(in srgb,currentColor 58%,#17334a);border-radius:6px;text-align:center;color:#c7d3dd;font:500 9px "JetBrains Mono",monospace}.timeline-aside>a{grid-column:1/-1;justify-self:end;color:currentColor;font-size:11px;font-weight:600}
+.brand-sfr{width:54px;height:54px;display:grid;place-items:center;align-self:start;padding-top:3px;background:#ed101d;color:white;font-size:18px;font-weight:800}.brand-sfr small{align-self:end;width:100%;padding:3px 0;background:#07131f;text-align:center;font-size:6px;font-weight:600}
+
+.timeline-row.experience{color:#11c5f6}.timeline-row.education{color:#b862f5}.timeline-row.certifications{color:#8bed3f}.timeline-row.education .timeline-card{background:radial-gradient(circle at 78% 25%,rgba(151,69,210,.06),transparent 34%),linear-gradient(180deg,rgba(14,16,34,.95),rgba(5,13,24,.96))}
+
+.timeline-row.certifications{min-height:128px}.timeline-row.certifications .timeline-date{padding-top:37px}.timeline-row.certifications .timeline-node{top:42px;width:14px;height:14px}.timeline-row.certifications .timeline-axis::after{top:42px}.certification-branch::before{background:transparent}
+.timeline-row.certifications::before{content:"";position:absolute;z-index:1;left:calc(var(--date-col) + var(--axis-col) / 2);top:-15px;width:59px;height:58px;border-left:1px solid #8bed3f;border-bottom:1px solid #8bed3f;border-bottom-left-radius:14px;opacity:.78}
+.certification-strip{min-height:110px;margin:0 0 14px 28px;padding:18px 22px;display:grid;grid-template-columns:58px minmax(0,1fr);gap:18px;align-items:center;border:1px solid rgba(139,237,63,.62);border-radius:12px;background:radial-gradient(circle at 30% 50%,rgba(139,237,63,.05),transparent 25%),linear-gradient(180deg,rgba(8,23,25,.95),rgba(4,14,23,.96))}
+.certification-medal{width:54px;height:54px;border:1px solid rgba(139,237,63,.62);border-radius:8px;display:grid;place-items:center;color:#8bed3f;font:700 24px "JetBrains Mono",monospace}.certification-strip .timeline-type{margin-bottom:10px}
+.certification-grid{display:grid;grid-template-columns:repeat(4,1fr)}.certification-grid>div{min-height:54px;padding:0 18px;border-left:1px solid rgba(139,237,63,.31)}.certification-grid>div:first-child{padding-left:0;border-left:none}.certification-grid small,.certification-grid strong,.certification-grid span{display:block}.certification-grid small{margin-bottom:5px;color:#8bed3f;font:500 9px "JetBrains Mono",monospace}.certification-grid strong{color:#eaf1f6;font-size:15px}.certification-grid span{margin-top:3px;color:#8495a5;font-size:10px}
+
+.journey-cta-section{padding:2px 0 14px}.journey-cta{min-height:72px;padding:14px 20px;display:grid;grid-template-columns:46px 1fr auto;gap:18px;align-items:center;border:1px solid rgba(54,111,156,.38);border-radius:12px;background:linear-gradient(180deg,rgba(7,21,34,.9),rgba(4,14,23,.94))}.journey-cta-icon{width:38px;height:38px;display:grid;place-items:center;border:1px solid #48647b;border-radius:50%;color:white;font-size:22px}.journey-cta p{margin:0;color:#aebac5;font-size:12px;line-height:1.55}.journey-cta p strong{color:#16c4f5;font-weight:500}
+
+@media(max-width:1180px){.journey-hero-grid{grid-template-columns:1fr 1fr}.journey-intro-card{grid-template-columns:64px 1fr}.journey-intro-art{display:none}.timeline{--date-col:145px;--axis-col:44px}.timeline-card{grid-template-columns:52px 1fr}.timeline-aside{grid-column:2;grid-template-columns:1fr auto}.timeline-tags{padding-top:0}}
+@media(max-width:900px){.journey-hero{padding-top:30px}.journey-hero-grid{grid-template-columns:1fr;min-height:auto}.journey-visual{min-height:190px;order:-1}.journey-visual svg{max-width:480px}.journey-intro-card{padding:26px;grid-template-columns:1fr}.journey-question-icon{width:52px;height:52px;font-size:27px}.journey-section-head{align-items:flex-start;flex-direction:column}.journey-legend{gap:16px;flex-wrap:wrap}.timeline{--date-col:0px;--axis-col:38px}.timeline-row{grid-template-columns:38px minmax(0,1fr);padding-top:38px}.timeline-date{position:absolute;top:5px;left:43px;padding:0;text-align:left}.timeline-date strong,.timeline-date small{display:inline-block}.timeline-date small{margin:0 0 0 10px}.timeline-axis{grid-column:1}.timeline-card,.certification-strip{grid-column:2}.timeline-card{padding:20px}.timeline-row.certifications::before{left:19px;top:-10px;width:40px}.certification-strip{margin-left:16px}.certification-grid{grid-template-columns:repeat(2,1fr);gap:15px 0}.certification-grid>div:nth-child(3){border-left:none;padding-left:0}.journey-cta{grid-template-columns:42px 1fr}.journey-cta .button{grid-column:1/-1}}
+@media(max-width:620px){.journey-title{font-size:44px}.journey-lead{font-size:15px}.journey-visual{min-height:150px}.journey-intro-card{padding:22px 19px}.journey-intro-copy h2{font-size:17px}.timeline{--axis-col:30px}.timeline-row{grid-template-columns:30px minmax(0,1fr)}.timeline-date{left:35px}.timeline-axis::after{width:18px}.timeline-card{grid-template-columns:1fr;gap:14px}.timeline-icon{width:44px;height:44px}.timeline-aside{grid-column:1}.timeline-tags span{min-width:auto}.brand-sfr{display:none}.certification-strip{margin-left:10px;grid-template-columns:1fr}.certification-grid{grid-template-columns:1fr 1fr}.certification-grid>div{padding:10px 12px}.certification-grid>div:first-child,.certification-grid>div:nth-child(3){padding-left:12px}.journey-cta{padding:18px;grid-template-columns:1fr}.journey-cta-icon{display:none}}
+
+
+/* =========================================================
+   DETAIL PASS — V2
+   Small visual details matching the approved mockup
+   ========================================================= */
+
+.journey-stars circle{
+  fill:#1688ff;
+  opacity:.75;
+  filter:drop-shadow(0 0 5px rgba(22,136,255,.7));
+}
+
+.timeline-icon svg,
+.certification-medal svg{
+  width:29px;
+  height:29px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.7;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+
+.certification-medal svg{
+  width:31px;
+  height:31px;
+}
+
+/* More "alive" timeline nodes */
+.timeline-node::after{
+  content:"";
+  position:absolute;
+  inset:3px;
+  border-radius:50%;
+  background:currentColor;
+  opacity:.9;
+}
+
+.timeline-row.experience .timeline-node{
+  box-shadow:
+    0 0 0 5px rgba(17,197,246,.08),
+    0 0 10px rgba(17,197,246,.85),
+    0 0 22px rgba(17,197,246,.34);
+}
+
+.timeline-row.education .timeline-node{
+  box-shadow:
+    0 0 0 5px rgba(167,90,245,.08),
+    0 0 10px rgba(167,90,245,.85),
+    0 0 22px rgba(167,90,245,.34);
+}
+
+.timeline-row.certifications .timeline-node{
+  box-shadow:
+    0 0 0 5px rgba(139,237,63,.07),
+    0 0 10px rgba(139,237,63,.8),
+    0 0 22px rgba(139,237,63,.3);
+}
+
+/* Real mini-network on the right of the narrative card */
+.journey-intro-art{
+  position:relative;
+  min-height:210px;
+  opacity:.78;
+  background:
+    radial-gradient(circle at 52% 48%,rgba(17,197,246,.10),transparent 45%);
+  mask-image:linear-gradient(90deg,transparent 0%,black 18%,black 100%);
+}
+
+.journey-intro-art svg{
+  width:100%;
+  height:100%;
+  overflow:visible;
+}
+
+.intro-grid path{
+  fill:none;
+  stroke:rgba(22,136,255,.17);
+  stroke-width:1;
+}
+
+.intro-links path{
+  fill:none;
+  stroke:#11c5f6;
+  stroke-width:1.6;
+  stroke-dasharray:5 6;
+  filter:drop-shadow(0 0 5px rgba(17,197,246,.55));
+}
+
+.intro-points circle{
+  fill:#11c5f6;
+  filter:drop-shadow(0 0 6px rgba(17,197,246,.8));
+}
+
+.intro-points circle:nth-child(even){
+  fill:#1688ff;
+}
+
+/* Small "brand marks" so education cards don't feel empty */
+.edu-wordmark{
+  align-self:start;
+  justify-self:end;
+  color:#f5f7fb;
+  line-height:.88;
+  text-align:right;
+  opacity:.95;
+}
+
+.edu-wordmark small{
+  display:block;
+  margin-top:5px;
+  color:#aab5c0;
+  font:500 7px/1.15 Inter,sans-serif;
+}
+
+.esgi-mark{
+  font-size:28px;
+  font-weight:800;
+  letter-spacing:-.06em;
+}
+
+.artois-mark{
+  font-family:Georgia,serif;
+  font-size:27px;
+  font-style:italic;
+}
+
+.artois-mark small{
+  font-style:normal;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+}
+
+.timeline-row.education .timeline-aside{
+  position:relative;
+}
+
+.timeline-row.education .timeline-aside > a{
+  align-self:end;
+}
+
+/* Card icons pick up the category glow */
+.timeline-row.experience .timeline-icon{
+  box-shadow:inset 0 0 20px rgba(17,197,246,.035),0 0 18px rgba(17,197,246,.04);
+}
+
+.timeline-row.education .timeline-icon{
+  box-shadow:inset 0 0 20px rgba(167,90,245,.035),0 0 18px rgba(167,90,245,.04);
+}
+
+.certification-medal{
+  box-shadow:inset 0 0 20px rgba(139,237,63,.035),0 0 18px rgba(139,237,63,.05);
+}
+
+@media(max-width:1180px){
+  .edu-wordmark{
+    display:none;
+  }
+}
+
+@media(max-width:900px){
+  .journey-intro-art{
+    display:none;
+  }
+}

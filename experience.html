@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Parcours de Martin Springett — du développement à la cybersécurité.">
+  <title>Parcours — MS340</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="experience.css">
+
+  <style>
+    /* V4: finitions visuelles du haut de page */
+    .journey-stage-label{
+      text-anchor:middle;
+      font:600 10px "JetBrains Mono",monospace;
+      letter-spacing:.02em;
+    }
+    .blue-label{fill:#1688ff}
+    .cyan-label{fill:#11c5f6}
+    .violet-label{fill:#bd6cff}
+
+    .hero-mesh-cloud path{
+      fill:none;
+      stroke:rgba(17,197,246,.13);
+      stroke-width:.75;
+    }
+    .hero-mesh-cloud circle{
+      fill:#11c5f6;
+      opacity:.74;
+      filter:drop-shadow(0 0 4px rgba(17,197,246,.55));
+    }
+    .hero-mesh-cloud circle:nth-of-type(5n){
+      fill:#1688ff;
+      opacity:.62;
+    }
+    .hero-mesh-cloud circle:nth-of-type(7n){
+      fill:#bd6cff;
+      opacity:.55;
+    }
+
+    .intro-mesh-cloud path{
+      fill:none;
+      stroke:rgba(17,197,246,.22);
+      stroke-width:.8;
+    }
+    .intro-mesh-cloud circle{
+      fill:#11c5f6;
+      opacity:.84;
+    }
+    .intro-mesh-cloud circle:nth-of-type(4n){
+      fill:#1688ff;
+      opacity:.72;
+    }
+
+    .journey-intro-art{
+      min-height:220px;
+      opacity:.9;
+      background:none !important;
+      mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.65) 15%,black 32%,black 100%);
+    }
+    .journey-intro-art svg{
+      width:100%;
+      height:100%;
+      overflow:visible;
+    }
+  
+    .timeline-brand-logo{
+      display:block;
+      max-width:145px;
+      max-height:64px;
+      width:auto;
+      height:auto;
+      object-fit:contain;
+      margin-left:auto;
+    }
+  </style>
+
+</head>
+<body>
+  <div class="background-grid" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html#accueil" aria-label="Accueil">
+        <span class="brand-mark">M</span>
+        <span><strong>MS340</strong><small>IT &amp; Cyber Portfolio</small></span>
+      </a>
+      <button class="menu-button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a href="index.html#accueil">Accueil</a>
+        <a href="index.html#apropos">À propos</a>
+        <a class="active" href="experience.html">Parcours</a>
+        <a href="index.html#competences">Compétences</a>
+        <a href="index.html#realisations">Réalisations</a>
+        <a href="index.html#laboratoire">Laboratoire</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/martin-springett/" aria-label="LinkedIn">in</a>
+        <a href="mailto:martin.springett@protonmail.com" aria-label="E-mail">@</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="journey-page">
+    <section class="journey-hero">
+      <div class="container journey-hero-grid">
+        <div class="journey-heading">
+          <p class="journey-kicker">02 / PARCOURS</p>
+          <h1 class="journey-title"><span>Du développement à</span><strong>la cybersécurité</strong></h1>
+          <p class="journey-lead">Préssenti pour d'abord devenir développeur web, je me suis trouvé passionné en cours de route par la sécurité informatique et l'infrastructure cloud.</p>
+        </div>
+        <div class="journey-visual" aria-hidden="true">
+          <svg viewBox="0 0 560 270">
+            <defs>
+              <filter id="journey-glow">
+                <feGaussianBlur stdDeviation="3" result="blur"/>
+                <feMerge>
+                  <feMergeNode in="blur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+
+              <filter id="journey-node-glow">
+                <feGaussianBlur stdDeviation="1.8" result="blur"/>
+                <feMerge>
+                  <feMergeNode in="blur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+
+              <linearGradient id="journey-line" x1="0" x2="1">
+                <stop offset="0%" stop-color="#1688ff"/>
+                <stop offset="60%" stop-color="#11c5f6"/>
+                <stop offset="100%" stop-color="#a75af5"/>
+              </linearGradient>
+
+              <radialGradient id="mesh-fade" cx="50%" cy="50%" r="65%">
+                <stop offset="0%" stop-color="#11c5f6" stop-opacity=".22"/>
+                <stop offset="72%" stop-color="#1688ff" stop-opacity=".08"/>
+                <stop offset="100%" stop-color="#1688ff" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+
+            <!-- Nuage mesh abstrait -->
+            <ellipse cx="350" cy="130" rx="220" ry="106" fill="url(#mesh-fade)" opacity=".36"/>
+            <g class="hero-mesh-cloud">
+              <path d="M358.9 151.0 L333.6 152.8"/>
+              <path d="M498.5 100.8 L523.3 87.5"/>
+              <path d="M270.9 39.5 L260.9 44.6"/>
+              <path d="M270.9 39.5 L274.0 64.8"/>
+              <path d="M352.1 53.1 L360.3 31.1"/>
+              <path d="M352.1 53.1 L329.1 67.5"/>
+              <path d="M258.3 156.6 L250.8 143.3"/>
+              <path d="M258.3 156.6 L272.7 169.8"/>
+              <path d="M456.7 188.9 L454.0 186.4"/>
+              <path d="M456.7 188.9 L447.0 177.8"/>
+              <path d="M250.8 143.3 L269.3 139.0"/>
+              <path d="M518.8 151.7 L490.1 155.1"/>
+              <path d="M401.5 84.3 L392.8 77.0"/>
+              <path d="M401.5 84.3 L415.3 81.7"/>
+              <path d="M274.0 64.8 L260.9 44.6"/>
+              <path d="M274.0 64.8 L282.8 90.8"/>
+              <path d="M361.4 155.8 L333.6 152.8"/>
+              <path d="M361.4 155.8 L364.6 122.8"/>
+              <path d="M317.4 74.4 L329.1 67.5"/>
+              <path d="M472.0 149.9 L447.7 159.0"/>
+              <path d="M445.7 202.2 L454.0 186.4"/>
+              <path d="M445.7 202.2 L447.0 177.8"/>
+              <path d="M260.9 44.6 L282.8 90.8"/>
+              <path d="M462.7 110.0 L456.7 95.6"/>
+              <path d="M462.7 110.0 L463.6 78.4"/>
+              <path d="M456.7 95.6 L463.6 78.4"/>
+              <path d="M456.7 95.6 L415.3 81.7"/>
+              <path d="M315.9 122.9 L310.7 123.0"/>
+              <path d="M315.9 122.9 L344.9 107.0"/>
+              <path d="M201.7 80.5 L197.5 71.5"/>
+              <path d="M201.7 80.5 L177.1 86.0"/>
+              <path d="M242.4 85.2 L282.8 90.8"/>
+              <path d="M242.4 85.2 L207.3 108.3"/>
+              <path d="M177.1 86.0 L207.3 108.3"/>
+              <path d="M191.2 137.1 L207.3 108.3"/>
+              <path d="M191.2 137.1 L175.7 184.6"/>
+              <path d="M310.5 69.6 L282.8 90.8"/>
+              <path d="M522.6 88.2 L523.3 87.5"/>
+              <path d="M359.9 221.1 L341.6 212.0"/>
+              <path d="M359.9 221.1 L366.3 191.2"/>
+              <path d="M390.7 215.7 L366.3 191.2"/>
+              <path d="M454.0 186.4 L447.0 177.8"/>
+              <path d="M454.0 186.4 L447.7 159.0"/>
+              <path d="M285.1 100.5 L310.7 123.0"/>
+              <path d="M392.8 77.0 L415.3 81.7"/>
+              <path d="M392.8 77.0 L364.6 122.8"/>
+              <path d="M256.5 131.8 L269.3 139.0"/>
+              <path d="M366.3 191.2 L341.6 212.0"/>
+              <path d="M366.3 191.2 L333.6 152.8"/>
+              <path d="M249.5 175.6 L269.3 139.0"/>
+              <path d="M295.4 202.8 L272.7 169.8"/>
+              <path d="M295.4 202.8 L341.6 212.0"/>
+              <path d="M333.6 152.8 L310.7 123.0"/>
+              <path d="M333.6 152.8 L364.6 122.8"/>
+              <path d="M463.6 78.4 L415.3 81.7"/>
+              <path d="M447.0 177.8 L447.7 159.0"/>
+              <path d="M447.0 177.8 L435.0 162.1"/>
+              <path d="M488.8 184.7 L497.5 194.3"/>
+              <path d="M488.8 184.7 L490.1 155.1"/>
+              <path d="M490.1 155.1 L497.5 194.3"/>
+              <path d="M490.1 155.1 L447.7 159.0"/>
+              <path d="M364.6 122.8 L344.9 107.0"/>
+              <path d="M364.6 122.8 L310.7 123.0"/>
+              <path d="M310.7 123.0 L269.3 139.0"/>
+              <path d="M207.3 108.3 L197.5 71.5"/>
+              <path d="M272.7 169.8 L269.3 139.0"/>
+              <path d="M447.7 159.0 L435.0 162.1"/>
+              <path d="M435.0 162.1 L497.5 194.3"/>
+              <circle cx="358.9" cy="151.0" r="1.7"/>
+              <circle cx="498.5" cy="100.8" r="1.2"/>
+              <circle cx="524.8" cy="114.3" r="0.9"/>
+              <circle cx="270.9" cy="39.5" r="0.9"/>
+              <circle cx="352.1" cy="53.1" r="0.9"/>
+              <circle cx="258.3" cy="156.6" r="1.2"/>
+              <circle cx="456.7" cy="188.9" r="1.2"/>
+              <circle cx="250.8" cy="143.3" r="1.2"/>
+              <circle cx="481.3" cy="199.7" r="0.9"/>
+              <circle cx="518.8" cy="151.7" r="1.0"/>
+              <circle cx="401.5" cy="84.3" r="1.4"/>
+              <circle cx="274.0" cy="64.8" r="1.0"/>
+              <circle cx="361.4" cy="155.8" r="1.0"/>
+              <circle cx="376.4" cy="107.0" r="1.7"/>
+              <circle cx="317.4" cy="74.4" r="1.0"/>
+              <circle cx="472.0" cy="149.9" r="1.7"/>
+              <circle cx="445.7" cy="202.2" r="1.0"/>
+              <circle cx="260.9" cy="44.6" r="1.7"/>
+              <circle cx="462.7" cy="110.0" r="1.7"/>
+              <circle cx="456.7" cy="95.6" r="1.0"/>
+              <circle cx="315.9" cy="122.9" r="1.4"/>
+              <circle cx="201.7" cy="80.5" r="1.2"/>
+              <circle cx="242.4" cy="85.2" r="1.2"/>
+              <circle cx="177.1" cy="86.0" r="1.2"/>
+              <circle cx="191.2" cy="137.1" r="1.0"/>
+              <circle cx="310.5" cy="69.6" r="1.2"/>
+              <circle cx="522.6" cy="88.2" r="0.9"/>
+              <circle cx="359.9" cy="221.1" r="1.4"/>
+              <circle cx="390.7" cy="215.7" r="1.2"/>
+              <circle cx="175.7" cy="184.6" r="1.7"/>
+              <circle cx="282.8" cy="90.8" r="1.7"/>
+              <circle cx="454.0" cy="186.4" r="0.9"/>
+              <circle cx="285.1" cy="100.5" r="0.9"/>
+              <circle cx="392.8" cy="77.0" r="0.9"/>
+              <circle cx="360.3" cy="31.1" r="1.2"/>
+              <circle cx="256.5" cy="131.8" r="1.0"/>
+              <circle cx="366.3" cy="191.2" r="1.4"/>
+              <circle cx="249.5" cy="175.6" r="1.7"/>
+              <circle cx="295.4" cy="202.8" r="1.4"/>
+              <circle cx="333.6" cy="152.8" r="0.9"/>
+              <circle cx="463.6" cy="78.4" r="1.7"/>
+              <circle cx="447.0" cy="177.8" r="0.9"/>
+              <circle cx="488.8" cy="184.7" r="1.2"/>
+              <circle cx="490.1" cy="155.1" r="1.2"/>
+              <circle cx="364.6" cy="122.8" r="1.4"/>
+              <circle cx="310.7" cy="123.0" r="0.9"/>
+              <circle cx="344.9" cy="107.0" r="0.9"/>
+              <circle cx="207.3" cy="108.3" r="1.0"/>
+              <circle cx="523.3" cy="87.5" r="0.9"/>
+              <circle cx="329.1" cy="67.5" r="1.7"/>
+              <circle cx="272.7" cy="169.8" r="0.9"/>
+              <circle cx="447.7" cy="159.0" r="1.4"/>
+              <circle cx="197.5" cy="71.5" r="1.7"/>
+              <circle cx="435.0" cy="162.1" r="1.4"/>
+              <circle cx="415.3" cy="81.7" r="1.4"/>
+              <circle cx="497.5" cy="194.3" r="0.9"/>
+              <circle cx="341.6" cy="212.0" r="0.9"/>
+              <circle cx="269.3" cy="139.0" r="0.9"/>
+            </g>
+
+            <!-- quelques étoiles / poussière -->
+            <g class="journey-stars">
+              <circle cx="112" cy="44" r="1.2"/>
+              <circle cx="190" cy="70" r="1"/>
+              <circle cx="270" cy="26" r="1.3"/>
+              <circle cx="318" cy="52" r="1"/>
+              <circle cx="446" cy="35" r="1.2"/>
+              <circle cx="518" cy="112" r="1"/>
+              <circle cx="488" cy="210" r="1.1"/>
+              <circle cx="362" cy="224" r="1"/>
+              <circle cx="244" cy="209" r="1.2"/>
+            </g>
+
+            <!-- parcours -->
+            <path class="journey-route" filter="url(#journey-glow)"
+                  d="M82 183 C145 220 170 146 237 154
+                     S326 117 387 103
+                     S452 118 501 59"/>
+
+            <g class="journey-route-nodes" filter="url(#journey-node-glow)">
+              <circle cx="82" cy="183" r="5"/>
+              <circle cx="237" cy="154" r="5"/>
+              <circle cx="387" cy="103" r="5"/>
+              <circle cx="501" cy="59" r="5"/>
+            </g>
+
+            <!-- Développement -->
+            <g class="journey-tech-card" transform="translate(48 142)">
+              <rect width="70" height="70" rx="11"/>
+              <g transform="translate(16 17)" fill="none" stroke="#1688ff"
+                 stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11 6 3 18l8 12"/>
+                <path d="m27 6 8 12-8 12"/>
+                <path d="m22 3-7 30"/>
+              </g>
+            </g>
+            <text class="journey-stage-label blue-label" x="83" y="230">DÉVELOPPEMENT</text>
+
+            <!-- Réseaux & systèmes -->
+            <g class="journey-tech-card" transform="translate(202 115)">
+              <rect width="70" height="70" rx="11"/>
+              <g transform="translate(17 17)" fill="none" stroke="#11c5f6"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="1" width="34" height="9" rx="2"/>
+                <rect x="1" y="14" width="34" height="9" rx="2"/>
+                <rect x="1" y="27" width="34" height="9" rx="2"/>
+                <circle cx="7" cy="5.5" r="1"/>
+                <circle cx="7" cy="18.5" r="1"/>
+                <circle cx="7" cy="31.5" r="1"/>
+                <path d="M27 5.5h3M27 18.5h3M27 31.5h3"/>
+              </g>
+            </g>
+            <text class="journey-stage-label cyan-label" x="237" y="205">RÉSEAUX &amp;</text>
+            <text class="journey-stage-label cyan-label" x="237" y="218">SYSTÈMES</text>
+
+            <!-- Cybersécurité -->
+            <g class="journey-tech-card cyan" transform="translate(352 67)">
+              <rect width="70" height="70" rx="11"/>
+              <g transform="translate(17 14)" fill="none" stroke="#11c5f6"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2 33 7v11c0 10-6 16-15 21C9 34 3 28 3 18V7L18 2Z"/>
+                <rect x="13" y="17" width="10" height="9" rx="1.5"/>
+                <path d="M15 17v-3a3 3 0 0 1 6 0v3"/>
+              </g>
+            </g>
+            <text class="journey-stage-label cyan-label" x="387" y="155">CYBERSÉCURITÉ</text>
+
+            <!-- Protection -->
+            <g class="journey-tech-card violet" transform="translate(470 23)">
+              <rect width="66" height="66" rx="11"/>
+              <g transform="translate(12 14)" fill="none" stroke="#bd6cff"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10 25H7a6 6 0 0 1 0-12 10 10 0 0 1 19-3 8 8 0 0 1 10 8 7 7 0 0 1-3 6"/>
+                <rect x="21" y="20" width="13" height="12" rx="2"/>
+                <path d="M24 20v-4a3.5 3.5 0 0 1 7 0v4"/>
+              </g>
+            </g>
+            <text class="journey-stage-label violet-label" x="503" y="109">PROTECTION</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="journey-intro-section">
+      <div class="container">
+        <article class="journey-intro-card">
+          <div class="journey-question-icon" aria-hidden="true">?</div>
+          <div class="journey-intro-copy">
+            <h2><span>&gt;</span> Qu’est-ce qui m’a amené à faire de la cybersécurité ?</h2>
+            <p>Tout a commencé en troisième année de Licence Informatique, lorsque plusieurs de mes comptes de jeux ont été compromis à la suite d’une attaque par phishing. Curieux de comprendre comment cela avait été possible, j’ai commencé à m’intéresser aux vulnérabilités, aux exploits et à découvrir des outils comme Kali Linux. </p>
+            <p>Cette curiosité m’a rapidement amené vers l’autoformation et mes premiers challenges de cybersécurité. C’est à ce moment-là que j’ai découvert une véritable passion, qui m’a conduit à orienter la suite de mes études et mon parcours professionnel vers la cybersécurité.</p>
+            <p>Aujourd’hui, j’aime également transmettre ce que j’ai appris et sensibiliser mon entourage. Mes formations m’ont depuis ouvert à d’autres domaines qui me passionnent, notamment le cloud computing et les réseaux sans fil.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="journey-timeline-section">
+      <div class="container">
+        <div class="journey-section-head">
+          <div><h2>MON PARCOURS</h2><span class="journey-head-line"></span></div>
+          <div class="journey-legend" aria-label="Légende">
+            <span><i class="dot exp"></i>Expérience</span><span><i class="dot edu"></i>Formation</span><span><i class="dot cert"></i>Certification</span>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-row experience">
+            <div class="timeline-date"><strong>2022 — 2024</strong><small>24 mois</small></div>
+            <div class="timeline-axis"><span class="timeline-node"></span></div>
+            <div class="timeline-card">
+              <div class="timeline-icon" aria-hidden="true">
+                  <svg viewBox="0 0 32 32">
+                    <rect x="5" y="9" width="22" height="16" rx="2"/>
+                    <path d="M11 9V6h10v3M5 15h22M13 15v3h6v-3"/>
+                  </svg>
+                </div>
+              <div class="timeline-content">
+                <span class="timeline-type">EXPÉRIENCE</span><h3>SFR Business</h3><h4>Ingénieur Avant-Vente Réseaux &amp; Cybersécurité</h4><small>Alternance — 24 mois</small>
+                <p>Accompagnement des clients sur des projets réseaux et sécurité : études d’architecture, POC, rédaction de propositions techniques, démonstrations et support avant-vente.</p>
+              </div>
+              <div class="timeline-aside">
+                <div class="timeline-tags"><span>FORTINET</span><span>SD-WAN</span><span>SASE</span><span>WI-FI</span><span>FIREWALL</span><span>AVANT-VENTE</span></div>
+                <img class="timeline-brand-logo" src="assets/logo-sfr.png" alt="SFR Business"><a href="#sfr-detail">Voir le détail →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-row education">
+            <div class="timeline-date"><strong>2022 — 2024</strong><small>24 mois</small></div>
+            <div class="timeline-axis"><span class="timeline-node"></span></div>
+            <div class="timeline-card">
+              <div class="timeline-icon" aria-hidden="true">
+                  <svg viewBox="0 0 32 32">
+                    <path d="M3 11 16 5l13 6-13 6L3 11Z"/>
+                    <path d="M8 14v7c5 4 11 4 16 0v-7M27 12v8"/>
+                  </svg>
+                </div>
+              <div class="timeline-content">
+                <span class="timeline-type">FORMATION</span><h3>Mastère Sécurité Informatique</h3><h4>ESGI Lille</h4><small>Alternance — 24 mois</small>
+                <p>Spécialisation en cybersécurité : SOC, DFIR, pentest, CTI, cloud security, risk management, déploiement automatisé, systèmes et réseaux. Développement d'un Mémoire sur la sécurisation des IoT.</p>
+              </div>
+              <div class="timeline-aside"><div class="timeline-tags"><span>SOC</span><span>DFIR</span><span>PENTEST</span><span>CTI</span><span>CLOUD</span><span>GRC</span></div><img class="timeline-brand-logo" src="assets/logo-esgi.png" alt="ESGI"><a href="#esgi-detail">Voir le détail →</a></div>
+            </div>
+          </article>
+
+          <article class="timeline-row certifications" id="certifications">
+            <div class="timeline-date"><strong>2024</strong><small>Certifications</small></div>
+            <div class="timeline-axis certification-branch"><span class="timeline-node"></span></div>
+            <div class="certification-strip">
+              <div class="certification-medal" aria-hidden="true">
+                <svg viewBox="0 0 32 32">
+                  <circle cx="16" cy="12" r="7"/>
+                  <path d="m12 18-2 9 6-3 6 3-2-9"/>
+                  <path d="m16 8 1.2 2.5 2.8.4-2 2 .5 2.8-2.5-1.3-2.5 1.3.5-2.8-2-2 2.8-.4L16 8Z"/>
+                </svg>
+              </div>
+              <div class="certification-strip-content">
+                <span class="timeline-type">CERTIFICATIONS OBTENUES EN 2024</span>
+                <div class="certification-grid">
+                  <div><small>FÉV. 2024</small><strong>eJPT</strong><span>INE / eLearnSecurity</span></div>
+                  <div><small>MAI 2024</small><strong>PJPT</strong><span>TCM Security</span></div>
+                  <div><small>JUIN 2024</small><strong>PJMR</strong><span>TCM Security</span></div>
+                  <div><small>JANVIER 2024</small><strong>FCA</strong><span>Fortinet</span></div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-row experience">
+            <div class="timeline-date"><strong>2021</strong><small>3 mois</small></div>
+            <div class="timeline-axis"><span class="timeline-node"></span></div>
+            <div class="timeline-card">
+              <div class="timeline-icon" aria-hidden="true">
+                  <svg viewBox="0 0 32 32">
+                    <path d="m12 9-7 7 7 7M20 9l7 7-7 7M18 6l-4 20"/>
+                  </svg>
+                </div>
+              <div class="timeline-content"><span class="timeline-type">EXPÉRIENCE</span><h3>Stage Développement</h3><h4>ALLOA Voyages</h4><small>Stage — 3 mois</small><p>Migration d’une application de Python vers Go et d’une base de données de PostgreSQL vers MySQL. Mise en place d'un système de sérialisation de données en XML.</p></div>
+              <div class="timeline-aside"><div class="timeline-tags"><span>PYTHON</span><span>GO</span><span>SQL</span><span>POSTGRESQL</span><span>MYSQL</span><span>XML</span></div><img class="timeline-brand-logo" src="assets/logo-alloa.png" alt="ALLOA Voyages"><a href="#stage-detail">Voir le détail →</a></div>
+            </div>
+          </article>
+
+          <article class="timeline-row education">
+            <div class="timeline-date"><strong>2016 — 2021</strong><small>5 ans</small></div>
+            <div class="timeline-axis"><span class="timeline-node"></span></div>
+            <div class="timeline-card">
+              <div class="timeline-icon" aria-hidden="true">
+                  <svg viewBox="0 0 32 32">
+                    <path d="M6 5h9c3 0 5 2 5 5v17c0-3-2-5-5-5H6V5Z"/>
+                    <path d="M26 5h-6v22c0-3 2-5 5-5h1V5Z"/>
+                  </svg>
+                </div>
+              <div class="timeline-content"><span class="timeline-type">FORMATION</span><h3>Licence Informatique</h3><h4>Université d’Artois</h4><small>5 ans</small><p>Formation généraliste en informatique avec une spécialisation progressive dans le développement logiciel. Formation basique sur les systèmes Linux et les réseaux.</p></div>
+              <div class="timeline-aside"><div class="timeline-tags"><span>ALGORITHMIQUE</span><span>RÉSEAUX</span><span>SYSTÈMES</span><span>DÉVELOPPEMENT</span><span>LINUX</span><span>PYTHON</span><span>C</span><span>JAVA</span></div><img class="timeline-brand-logo" src="assets/logo-artois.png" alt="Université d’Artois"><a href="#licence-detail">Voir le détail →</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="journey-cta-section">
+      <div class="container">
+        <div class="journey-cta">
+          <span class="journey-cta-icon">ϟ</span>
+          <p>Curieux, rigoureux et passionné par les infrastructures, je poursuis aujourd’hui mon objectif : développer une expertise à la croisée de la <strong>cybersécurité</strong>, des <strong>réseaux</strong> et des <strong>technologies cloud</strong>.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container">© 2026 MS340 — Tous droits réservés.</div></footer>
+  <script>
+    const btn = document.querySelector('.menu-button');
+    const menu = document.querySelector('.nav-links');
+    btn?.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  </script>
+</body>
+</html>
