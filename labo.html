@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Laboratoire personnel MS340 — infrastructure, réseaux, cybersécurité et SOC.">
+  <title>Laboratoire — MS340</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="lab.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="Accueil">
+      <span class="brand-mark">M</span>
+      <span><strong>MS340</strong><small>IT &amp; Cyber Portfolio</small></span>
+    </a>
+
+    <button class="menu-button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+
+    <nav class="nav-links" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="index.html#apropos">À propos</a>
+      <a href="experience.html">Parcours</a>
+      <a href="index.html#competences">Compétences</a>
+      <a href="index.html#realisations">Réalisations</a>
+      <a class="active" href="lab.html">Laboratoire</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="lab-page">
+
+  <section class="lab-hero">
+    <div class="container lab-hero-grid">
+      <div class="lab-hero-copy">
+        <p class="lab-eyebrow">04 / LABORATOIRE</p>
+        <h1>Mon laboratoire<br><span>d'infrastructure</span><br><span>&amp; cybersécurité</span></h1>
+        <p class="lab-hero-text">
+          Un environnement personnel que je construis, administre et sécurise
+          pour expérimenter, approfondir mes compétences et me rapprocher
+          de situations réelles d'exploitation.
+        </p>
+
+        <div class="lab-stats">
+          <div><strong>10+</strong><span>Machines virtuelles</span></div>
+          <div><strong>5</strong><span>VLANs</span></div>
+          <div><strong>100%</strong><span>Virtualisé</span></div>
+        </div>
+      </div>
+
+      <div class="lab-hero-note">
+        <span class="lab-quote-mark">“</span>
+        <p>Apprendre par la pratique,<br>se rapprocher du réel.</p>
+        <small>— MS340</small>
+      </div>
+    </div>
+  </section>
+
+  <section class="lab-architecture">
+    <div class="container">
+      <div class="lab-section-head">
+        <div>
+          <p class="lab-eyebrow">01 / ARCHITECTURE</p>
+          <h2>Vue logique du laboratoire</h2>
+        </div>
+        <p>
+          Une vue synthétique des zones, équipements et flux principaux.
+          Le lab évolue au fil de mes expérimentations.
+        </p>
+      </div>
+
+      <div class="lab-topology-frame">
+
+
+<svg class="lab-topology-svg" viewBox="0 0 1400 660" role="img" aria-labelledby="topology-title topology-desc">
+  <title id="topology-title">Architecture logique du laboratoire MS340</title>
+  <desc id="topology-desc">Internet, OPNsense, DMZ, cœur L3, commutateurs d'accès, VLANs et SOCaaS distant.</desc>
+
+  <defs>
+    <pattern id="topo-grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M28 0H0V28" fill="none" stroke="currentColor" stroke-width="1"/>
+    </pattern>
+    <marker id="arrow-vpn" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z"/>
+    </marker>
+  </defs>
+
+  <rect class="topo-bg" width="1400" height="660" rx="14"/>
+  <rect class="topo-grid" width="1400" height="660" rx="14"/>
+
+  <!-- INTERNET -->
+  <g class="topo-device topo-internet" transform="translate(515 28)">
+    <rect width="250" height="72" rx="14"/>
+    <g class="topo-globe" transform="translate(24 14)">
+      <circle cx="22" cy="22" r="20"/>
+      <path d="M2 22h40M22 2c-8 9-8 31 0 40M22 2c8 9 8 31 0 40M7 10c9 5 21 5 30 0M7 34c9-5 21-5 30 0"/>
+    </g>
+    <text class="topo-title" x="88" y="30">Internet</text>
+    <text class="topo-sub" x="88" y="50">Réseau public</text>
+  </g>
+
+  <!-- OPNsense -->
+  <g class="topo-device topo-firewall" transform="translate(526 148)">
+    <rect width="228" height="76" rx="14"/>
+    <text class="topo-title center" x="114" y="31">OPNsense</text>
+    <text class="topo-sub center" x="114" y="52">Firewall / Routeur</text>
+  </g>
+
+  <path class="topo-link topo-wan" d="M640 100V148"/>
+  <text class="topo-label" x="653" y="130">WAN</text>
+
+  <!-- SOCaaS -->
+  <g class="topo-zone topo-zone-soc">
+    <rect x="1010" y="110" width="340" height="190" rx="16"/>
+    <text class="topo-zone-title" x="1033" y="140">SOCaaS / CLOUD DISTANT</text>
+
+    <g class="topo-device topo-soc-node" transform="translate(1034 165)">
+      <rect width="88" height="64" rx="10"/>
+      <text class="topo-title center" x="44" y="27">Wazuh</text>
+      <text class="topo-sub center" x="44" y="46">SIEM / XDR</text>
+    </g>
+    <text class="topo-flow-arrow" x="1135" y="204">→</text>
+    <g class="topo-device topo-soc-node" transform="translate(1160 165)">
+      <rect width="88" height="64" rx="10"/>
+      <text class="topo-title center" x="44" y="27">Shuffle</text>
+      <text class="topo-sub center" x="44" y="46">SOAR</text>
+    </g>
+    <text class="topo-flow-arrow" x="1261" y="204">→</text>
+    <g class="topo-device topo-soc-node" transform="translate(1286 165)">
+      <rect width="50" height="64" rx="10"/>
+      <text class="topo-title center small" x="25" y="27">Hive</text>
+      <text class="topo-sub center" x="25" y="46">IR</text>
+    </g>
+
+    <text class="topo-sub" x="1035" y="264">Wazuh → Shuffle → TheHive</text>
+  </g>
+
+  <!-- VPN : part directement d'OPNsense vers le SOC -->
+  <path class="topo-link topo-vpn" d="M754 168H890Q930 168 930 205H1010" marker-end="url(#arrow-vpn)"/>
+  <text class="topo-label topo-vpn-label" x="800" y="154">IPSec VPN · 10.10.10.0/30</text>
+
+  <!-- DMZ -->
+  <g class="topo-zone topo-zone-dmz">
+    <rect x="70" y="150" width="330" height="170" rx="16"/>
+    <text class="topo-zone-title" x="92" y="180">DMZ</text>
+
+    <g class="topo-device topo-dmz-node" transform="translate(108 205)">
+      <rect width="255" height="78" rx="11"/>
+      <text class="topo-title center" x="127.5" y="27">Serveur DMZ</text>
+      <text class="topo-sub center" x="127.5" y="48">Docker · Web + Mail</text>
+      <text class="topo-sub center" x="127.5" y="65">10.0.2.1</text>
+    </g>
+  </g>
+
+  <path class="topo-link topo-dmz-link" d="M526 186H400"/>
+  <text class="topo-label topo-dmz-label" x="437" y="174">DMZ</text>
+
+  <!-- LAN -->
+  <g class="topo-zone topo-zone-lan">
+    <rect x="445" y="290" width="850" height="325" rx="18"/>
+    <text class="topo-zone-title" x="470" y="322">LAN INTERNE · labland.local</text>
+  </g>
+
+  <!-- OPNsense -> MLS-DIS -->
+  <path class="topo-link topo-lan-link" d="M640 224V352"/>
+  <text class="topo-label" x="653" y="270">LAN / TRANSIT L3</text>
+
+  <!-- MLS-DIS -->
+  <g class="topo-device topo-switch topo-mls" transform="translate(540 352)">
+    <rect width="200" height="70" rx="13"/>
+    <text class="topo-title center" x="100" y="29">MLS-DIS</text>
+    <text class="topo-sub center" x="100" y="50">L3 Switch (Cisco)</text>
+  </g>
+
+  <!-- VLAN 40 directement sur le MLS : réseau serveurs / AD -->
+  <g class="topo-device topo-vlan topo-vlan40" transform="translate(790 342)">
+    <rect width="200" height="80" rx="11"/>
+    <text class="topo-title center" x="100" y="24">VLAN 40</text>
+    <text class="topo-sub center" x="100" y="43">10.0.0.0/28</text>
+    <text class="topo-sub center" x="100" y="62">AD / DNS · 10.0.0.1</text>
+  </g>
+  <path class="topo-link topo-vlan40-link" d="M740 386H790"/>
+
+  <!-- ACCESS SWITCHES : pas d'IP affichée -->
+  <g class="topo-device topo-switch" transform="translate(480 472)">
+    <rect width="180" height="66" rx="12"/>
+    <text class="topo-title center" x="90" y="27">SW-ACC1</text>
+    <text class="topo-sub center" x="90" y="47">L2 Switch (Cisco)</text>
+  </g>
+
+  <g class="topo-device topo-switch" transform="translate(770 472)">
+    <rect width="180" height="66" rx="12"/>
+    <text class="topo-title center" x="90" y="27">SW-ACC2</text>
+    <text class="topo-sub center" x="90" y="47">L2 Switch (Cisco)</text>
+  </g>
+
+  <!-- Triangle de trunks -->
+  <path class="topo-link topo-trunk" d="M600 422L570 472"/>
+  <path class="topo-link topo-trunk" d="M680 422L860 472"/>
+  <path class="topo-link topo-trunk" d="M660 505H770"/>
+  <text class="topo-label" x="676" y="462">TRUNKS 802.1Q</text>
+
+  <!-- VLAN 10 / 20 derrière ACC1 -->
+  <g class="topo-device topo-vlan topo-vlan10" transform="translate(470 558)">
+    <rect width="150" height="45" rx="10"/>
+    <text class="topo-title center" x="75" y="20">VLAN 10</text>
+    <text class="topo-sub center" x="75" y="36">172.16.0.0/24</text>
+  </g>
+
+  <g class="topo-device topo-vlan topo-vlan20" transform="translate(630 558)">
+    <rect width="150" height="45" rx="10"/>
+    <text class="topo-title center" x="75" y="20">VLAN 20</text>
+    <text class="topo-sub center" x="75" y="36">172.16.1.0/24</text>
+  </g>
+
+  <path class="topo-link topo-access-link" d="M570 538V548H545V558"/>
+  <path class="topo-link topo-access-link" d="M570 538V548H705V558"/>
+
+  <!-- VLAN 30 derrière ACC2 -->
+  <g class="topo-device topo-vlan topo-vlan30" transform="translate(905 558)">
+    <rect width="200" height="55" rx="10"/>
+    <text class="topo-title center" x="100" y="22">VLAN 30</text>
+    <text class="topo-sub center" x="100" y="40">172.16.2.0/24</text>
+  </g>
+
+  <path class="topo-link topo-access-link" d="M860 538V558H905"/>
+
+  <!-- légende -->
+  <g class="topo-legend" transform="translate(72 625)">
+    <circle class="legend-lan" cx="5" cy="5" r="4"/><text x="17" y="9">LAN</text>
+    <circle class="legend-dmz" cx="72" cy="5" r="4"/><text x="84" y="9">DMZ</text>
+    <circle class="legend-soc" cx="145" cy="5" r="4"/><text x="157" y="9">VPN / SOC</text>
+    <line class="legend-trunk" x1="245" y1="5" x2="275" y2="5"/><text x="285" y="9">TRUNK 802.1Q</text>
+  </g>
+</svg>
+
+
+      </div>
+    </div>
+  </section>
+
+  <section class="lab-section">
+    <div class="container">
+      <div class="lab-section-head">
+        <div>
+          <p class="lab-eyebrow">02 / PHILOSOPHIE</p>
+          <h2>Pourquoi ce laboratoire ?</h2>
+        </div>
+        <p>Comprendre l'infrastructure avant de chercher à la sécuriser.</p>
+      </div>
+
+      <div class="lab-philosophy-grid">
+        <div class="lab-philosophy-copy">
+          <p>
+            Je considère qu'il est difficile de comprendre réellement la sécurité
+            d'une infrastructure sans comprendre d'abord comment celle-ci fonctionne.
+          </p>
+          <p>
+            J'ai donc conçu ce laboratoire comme un environnement dans lequel je peux
+            expérimenter librement autour des réseaux, des systèmes et de la cybersécurité.
+          </p>
+          <p>
+            L'objectif n'est pas uniquement de reproduire des configurations apprises
+            en formation, mais de construire progressivement une infrastructure cohérente,
+            de rencontrer les problèmes qu'elle implique et d'apprendre à les diagnostiquer.
+          </p>
+        </div>
+
+        <article class="lab-mini-card">
+          <span class="lab-card-index">01</span>
+          <h3>Réseau &amp; infrastructure</h3>
+          <p>VLAN, trunks, routage L3, VTP, sécurité de couche 2, DMZ et NAT.</p>
+        </article>
+
+        <article class="lab-mini-card">
+          <span class="lab-card-index">02</span>
+          <h3>Systèmes</h3>
+          <p>Windows Server, Active Directory, DNS, DHCP, Linux et services internes.</p>
+        </article>
+
+        <article class="lab-mini-card">
+          <span class="lab-card-index">03</span>
+          <h3>Détection &amp; réponse</h3>
+          <p>Wazuh, Shuffle et TheHive dans une logique SOCaaS reliée au lab.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="lab-section lab-evidence">
+    <div class="container">
+      <div class="lab-section-head">
+        <div>
+          <p class="lab-eyebrow">03 / EN PRATIQUE</p>
+          <h2>Configurations &amp; expérimentations</h2>
+        </div>
+        <p>Quelques captures suffisent : elles servent de preuves, pas de documentation exhaustive.</p>
+      </div>
+
+      <div class="lab-gallery">
+        <article class="lab-shot lab-shot-wide">
+          <div class="lab-shot-placeholder">CAPTURE EVE-NG</div>
+          <div class="lab-shot-copy">
+            <span>VIRTUALISATION</span>
+            <h3>Topologie EVE-NG</h3>
+            <p>Vue globale de l'infrastructure et des différentes zones du laboratoire.</p>
+          </div>
+        </article>
+
+        <article class="lab-shot">
+          <div class="lab-shot-placeholder">CAPTURE OPNsense</div>
+          <div class="lab-shot-copy">
+            <span>SÉCURITÉ</span>
+            <h3>Firewall &amp; NAT</h3>
+            <p>Filtrage inter-zones, règles DMZ et NAT entrant/sortant.</p>
+          </div>
+        </article>
+
+        <article class="lab-shot">
+          <div class="lab-shot-placeholder">CAPTURE CISCO IOS</div>
+          <div class="lab-shot-copy">
+            <span>RÉSEAU</span>
+            <h3>Switching &amp; routage</h3>
+            <p>VLANs, trunks, routage L3 et sécurité de couche 2.</p>
+          </div>
+        </article>
+
+        <article class="lab-shot">
+          <div class="lab-shot-placeholder">CAPTURE AD / DNS</div>
+          <div class="lab-shot-copy">
+            <span>SYSTÈMES</span>
+            <h3>Active Directory &amp; DNS</h3>
+            <p>Services Windows intégrés à l'infrastructure du lab.</p>
+          </div>
+        </article>
+
+        <article class="lab-shot">
+          <div class="lab-shot-placeholder">CAPTURE WAZUH</div>
+          <div class="lab-shot-copy">
+            <span>SOCaaS</span>
+            <h3>Détection &amp; réponse</h3>
+            <p>Collecte, détection, automatisation et gestion d'incidents.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="lab-section lab-roadmap">
+    <div class="container">
+      <div class="lab-section-head">
+        <div>
+          <p class="lab-eyebrow">04 / ROADMAP</p>
+          <h2>Prochaines évolutions</h2>
+        </div>
+        <p>Un laboratoire vivant, qui évolue avec mes compétences et mes objectifs techniques.</p>
+      </div>
+
+      <div class="lab-roadmap-grid">
+        <article>
+          <div class="lab-roadmap-top"><span>◎</span><strong>40%</strong></div>
+          <h3>SOCaaS avancé</h3>
+          <p>Playbooks Shuffle, enrichissement et workflows TheHive.</p>
+          <div class="lab-progress"><i style="width:40%"></i></div>
+        </article>
+
+        <article>
+          <div class="lab-roadmap-top"><span>⌕</span><strong>20%</strong></div>
+          <h3>CTI &amp; Threat Hunting</h3>
+          <p>IOC, détection et investigation proactive.</p>
+          <div class="lab-progress"><i style="width:20%"></i></div>
+        </article>
+
+        <article>
+          <div class="lab-roadmap-top"><span>↻</span><strong>30%</strong></div>
+          <h3>Résilience</h3>
+          <p>Sauvegardes, restauration et scénarios de reprise.</p>
+          <div class="lab-progress"><i style="width:30%"></i></div>
+        </article>
+
+        <article>
+          <div class="lab-roadmap-top"><span>☁</span><strong>10%</strong></div>
+          <h3>Cloud &amp; Zero Trust</h3>
+          <p>Extension hybride et contrôles d'accès plus fins.</p>
+          <div class="lab-progress"><i style="width:10%"></i></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+const btn = document.querySelector('.menu-button');
+const nav = document.querySelector('.nav-links');
+btn?.addEventListener('click', () => {
+  const open = nav.classList.toggle('open');
+  btn.setAttribute('aria-expanded', String(open));
+});
+</script>
+</body>
+</html>

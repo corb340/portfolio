@@ -1,0 +1,553 @@
+
+.lab-page{
+  color:#edf6ff;
+}
+
+.lab-page *{
+  box-sizing:border-box;
+}
+
+.lab-hero{
+  position:relative;
+  padding:88px 0 64px;
+  overflow:hidden;
+}
+
+.lab-hero::after{
+  content:"";
+  position:absolute;
+  width:520px;
+  height:520px;
+  right:-180px;
+  top:-230px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(20,139,255,.12),transparent 66%);
+  pointer-events:none;
+}
+
+.lab-hero-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.25fr) minmax(260px,.75fr);
+  gap:70px;
+  align-items:end;
+}
+
+.lab-eyebrow{
+  margin:0 0 14px;
+  color:#22d3ee;
+  font:600 10px "JetBrains Mono",monospace;
+  letter-spacing:.15em;
+}
+
+.lab-hero-copy h1{
+  margin:0;
+  font-size:clamp(48px,5.2vw,76px);
+  line-height:.94;
+  letter-spacing:-.055em;
+}
+
+.lab-hero-copy h1 span{
+  color:#168cff;
+}
+
+.lab-hero-text{
+  max-width:650px;
+  margin:26px 0 0;
+  color:#9ab0c4;
+  font-size:15px;
+  line-height:1.8;
+}
+
+.lab-stats{
+  display:flex;
+  gap:0;
+  margin-top:34px;
+}
+
+.lab-stats>div{
+  min-width:135px;
+  padding:0 24px;
+  border-right:1px solid rgba(255,255,255,.08);
+}
+
+.lab-stats>div:first-child{
+  padding-left:0;
+}
+
+.lab-stats>div:last-child{
+  border-right:0;
+}
+
+.lab-stats strong{
+  display:block;
+  color:#fff;
+  font:700 19px "JetBrains Mono",monospace;
+}
+
+.lab-stats span{
+  display:block;
+  margin-top:4px;
+  color:#617e97;
+  font:500 9px "JetBrains Mono",monospace;
+}
+
+.lab-hero-note{
+  position:relative;
+  padding:24px 26px;
+  border:1px solid rgba(45,148,208,.19);
+  border-radius:14px;
+  background:linear-gradient(180deg,rgba(9,27,45,.68),rgba(7,19,32,.45));
+}
+
+.lab-quote-mark{
+  position:absolute;
+  left:18px;
+  top:4px;
+  color:#22d3ee;
+  opacity:.35;
+  font-size:56px;
+}
+
+.lab-hero-note p{
+  position:relative;
+  margin:0;
+  color:#a8bfd1;
+  line-height:1.65;
+  font-size:13px;
+}
+
+.lab-hero-note small{
+  display:block;
+  margin-top:12px;
+  color:#527089;
+  font:500 9px "JetBrains Mono",monospace;
+}
+
+.lab-architecture,
+.lab-section{
+  padding:72px 0;
+  border-top:1px solid rgba(76,127,167,.10);
+}
+
+.lab-section-head{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:42px;
+  margin-bottom:30px;
+}
+
+.lab-section-head h2{
+  margin:0;
+  font-size:30px;
+  letter-spacing:-.035em;
+}
+
+.lab-section-head>p{
+  max-width:480px;
+  margin:0;
+  color:#8199ae;
+  font-size:13px;
+  line-height:1.65;
+}
+
+.lab-topology-frame{
+  position:relative;
+  padding:8px;
+  border:1px solid rgba(34,211,238,.16);
+  border-radius:18px;
+  background:
+    linear-gradient(180deg,rgba(10,26,43,.58),rgba(6,17,29,.58));
+  box-shadow:0 22px 60px rgba(0,0,0,.18);
+}
+
+.lab-topology-frame::before{
+  content:"";
+  position:absolute;
+  inset:-1px;
+  z-index:-1;
+  border-radius:18px;
+  background:linear-gradient(135deg,rgba(34,211,238,.15),transparent 28%,transparent 70%,rgba(22,140,255,.10));
+}
+
+.lab-philosophy-grid{
+  display:grid;
+  grid-template-columns:1.3fr repeat(3,.73fr);
+  gap:18px;
+  align-items:stretch;
+}
+
+.lab-philosophy-copy{
+  padding:4px 28px 0 0;
+}
+
+.lab-philosophy-copy p{
+  margin:0 0 14px;
+  color:#9bb0c3;
+  font-size:14px;
+  line-height:1.8;
+}
+
+.lab-mini-card{
+  position:relative;
+  padding:22px;
+  border:1px solid rgba(83,139,181,.16);
+  border-radius:13px;
+  background:linear-gradient(180deg,rgba(12,29,48,.66),rgba(7,19,32,.58));
+  overflow:hidden;
+}
+
+.lab-mini-card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:65px;
+  height:1px;
+  background:linear-gradient(90deg,#22d3ee,transparent);
+}
+
+.lab-card-index{
+  color:#22d3ee;
+  font:600 9px "JetBrains Mono",monospace;
+}
+
+.lab-mini-card h3{
+  margin:28px 0 10px;
+  font-size:14px;
+}
+
+.lab-mini-card p{
+  margin:0;
+  color:#7c94aa;
+  font-size:11px;
+  line-height:1.6;
+}
+
+.lab-gallery{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:20px;
+}
+
+.lab-shot{
+  overflow:hidden;
+  border:1px solid rgba(83,139,181,.16);
+  border-radius:14px;
+  background:rgba(8,20,34,.66);
+  transition:transform .22s ease,border-color .22s ease;
+}
+
+.lab-shot:hover{
+  transform:translateY(-3px);
+  border-color:rgba(34,211,238,.28);
+}
+
+.lab-shot-wide{
+  grid-column:span 2;
+}
+
+.lab-shot-placeholder{
+  min-height:225px;
+  display:grid;
+  place-items:center;
+  border-bottom:1px solid rgba(83,139,181,.14);
+  color:#4f6c84;
+  background:
+    linear-gradient(rgba(5,14,24,.82),rgba(5,14,24,.82)),
+    repeating-linear-gradient(0deg,transparent 0 23px,rgba(46,106,151,.11) 24px),
+    repeating-linear-gradient(90deg,transparent 0 23px,rgba(46,106,151,.11) 24px);
+  font:600 10px "JetBrains Mono",monospace;
+  letter-spacing:.1em;
+}
+
+.lab-shot-wide .lab-shot-placeholder{
+  min-height:280px;
+}
+
+.lab-shot-copy{
+  padding:20px 21px 22px;
+}
+
+.lab-shot-copy>span{
+  color:#22d3ee;
+  font:600 8px "JetBrains Mono",monospace;
+  letter-spacing:.12em;
+}
+
+.lab-shot-copy h3{
+  margin:7px 0 8px;
+  font-size:16px;
+}
+
+.lab-shot-copy p{
+  margin:0;
+  color:#7e96ab;
+  font-size:12px;
+  line-height:1.55;
+}
+
+.lab-roadmap-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:18px;
+}
+
+.lab-roadmap-grid>article{
+  padding:21px;
+  border:1px solid rgba(83,139,181,.16);
+  border-radius:14px;
+  background:linear-gradient(180deg,rgba(12,28,46,.72),rgba(7,18,31,.64));
+}
+
+.lab-roadmap-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.lab-roadmap-top span{
+  display:grid;
+  place-items:center;
+  width:31px;
+  height:31px;
+  border:1px solid rgba(34,211,238,.20);
+  border-radius:8px;
+  color:#22d3ee;
+  background:rgba(34,211,238,.045);
+}
+
+.lab-roadmap-top strong{
+  color:#22d3ee;
+  font:600 11px "JetBrains Mono",monospace;
+}
+
+.lab-roadmap-grid h3{
+  margin:18px 0 8px;
+  font-size:14px;
+}
+
+.lab-roadmap-grid p{
+  min-height:55px;
+  margin:0;
+  color:#788fa4;
+  font-size:11px;
+  line-height:1.55;
+}
+
+.lab-progress{
+  height:6px;
+  margin-top:18px;
+  overflow:hidden;
+  border-radius:999px;
+  background:rgba(96,144,181,.10);
+}
+
+.lab-progress i{
+  display:block;
+  height:100%;
+  border-radius:inherit;
+  background:linear-gradient(90deg,#168cff,#22d3ee);
+  box-shadow:0 0 13px rgba(34,211,238,.36);
+}
+
+@media(max-width:1100px){
+  .lab-hero-grid{
+    grid-template-columns:1fr;
+  }
+
+  .lab-hero-note{
+    max-width:520px;
+  }
+
+  .lab-philosophy-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .lab-philosophy-copy{
+    grid-column:1/-1;
+    padding-right:0;
+  }
+
+  .lab-roadmap-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:760px){
+  .lab-hero{
+    padding-top:58px;
+  }
+
+  .lab-stats{
+    flex-direction:column;
+    gap:14px;
+  }
+
+  .lab-stats>div{
+    padding:0 0 12px;
+    border-right:0;
+    border-bottom:1px solid rgba(255,255,255,.07);
+  }
+
+  .lab-section-head{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .lab-philosophy-grid,
+  .lab-gallery,
+  .lab-roadmap-grid{
+    grid-template-columns:1fr;
+  }
+
+  .lab-shot-wide{
+    grid-column:auto;
+  }
+}
+
+
+/* =========================================================
+   TOPOLOGIE INLINE — modifiable directement dans labo.html
+   ========================================================= */
+.lab-topology-frame{
+  padding:8px;
+  overflow:hidden;
+}
+
+.lab-topology-svg{
+  display:block;
+  width:100%;
+  height:auto;
+  min-width:900px;
+  color:#153d58;
+  border-radius:13px;
+}
+
+.topo-bg{fill:#06111d}
+.topo-grid{fill:url(#topo-grid);opacity:.32}
+
+.topo-device>rect{
+  fill:#0b1928;
+  stroke:#2a7ba9;
+  stroke-width:1.35;
+  vector-effect:non-scaling-stroke;
+}
+.topo-title{
+  fill:#edf6ff;
+  font:700 14px Inter,Arial,sans-serif;
+}
+.topo-title.small{font-size:11px}
+.topo-sub{
+  fill:#7893a8;
+  font:500 9px "JetBrains Mono",monospace;
+}
+.center{text-anchor:middle}
+
+.topo-globe circle,
+.topo-globe path{
+  fill:none;
+  stroke:#22bdf7;
+  stroke-width:1.7;
+  vector-effect:non-scaling-stroke;
+}
+
+.topo-firewall>rect{stroke:#f59a2f}
+.topo-switch>rect{stroke:#22c8ef}
+.topo-server>rect{stroke:#268cff}
+.topo-soc-node>rect{stroke:#a85ef5}
+.topo-dmz-node>rect{stroke:#7f3c5b}
+
+.topo-zone>rect{
+  fill:rgba(7,20,33,.38);
+  stroke:#315e7d;
+  stroke-width:1.15;
+  stroke-dasharray:7 7;
+  vector-effect:non-scaling-stroke;
+}
+.topo-zone-dmz>rect{
+  fill:rgba(62,14,30,.30);
+  stroke:#ff4d6d;
+  stroke-dasharray:none;
+}
+.topo-zone-soc>rect{
+  fill:rgba(61,22,80,.24);
+  stroke:#a85ef5;
+  stroke-dasharray:none;
+}
+.topo-zone-title{
+  fill:#6f91aa;
+  font:600 10px "JetBrains Mono",monospace;
+  letter-spacing:.08em;
+}
+.topo-zone-dmz .topo-zone-title{fill:#ff6b84}
+.topo-zone-soc .topo-zone-title{fill:#c17aff}
+.topo-zone-net{
+  fill:#22c8ef;
+  font:500 10px "JetBrains Mono",monospace;
+}
+
+.topo-link{
+  fill:none;
+  stroke:#5685a5;
+  stroke-width:1.5;
+  vector-effect:non-scaling-stroke;
+}
+.topo-wan,.topo-lan-link{stroke:#278bc5}
+.topo-dmz-link{stroke:#f59a2f}
+.topo-vpn{
+  stroke:#a85ef5;
+  stroke-dasharray:8 6;
+  stroke-width:1.8;
+}
+#arrow-vpn path{fill:#a85ef5}
+.topo-trunk{
+  stroke:#22c8ef;
+  stroke-dasharray:7 5;
+  stroke-width:1.8;
+}
+.topo-access-link{stroke:#477997}
+.topo-management-link{stroke:#aabcca}
+.topo-server-link{
+  stroke:#a85ef5;
+  stroke-dasharray:5 5;
+}
+
+.topo-label{
+  fill:#67849a;
+  font:500 9px "JetBrains Mono",monospace;
+}
+.topo-dmz-label{fill:#e5a04c}
+.topo-vpn-label{fill:#bc76fa}
+.topo-flow-arrow{
+  fill:#b76cf8;
+  font:700 19px Inter,Arial,sans-serif;
+}
+
+.topo-vlan>rect{stroke-width:1.25}
+.topo-vlan10>rect{fill:#0a241a;stroke:#2ed97f}
+.topo-vlan20>rect{fill:#261d0c;stroke:#d79b00}
+.topo-vlan30>rect{fill:#21122c;stroke:#a85ef5}
+.topo-vlan40>rect{fill:#09242a;stroke:#12c7de}
+.topo-vlan99>rect{fill:#17222c;stroke:#aabcca}
+
+.topo-legend text{
+  fill:#6d899f;
+  font:500 8px "JetBrains Mono",monospace;
+}
+.legend-lan{fill:#268cff}
+.legend-dmz{fill:#f59a2f}
+.legend-soc{fill:#a85ef5}
+.legend-trunk{
+  stroke:#22c8ef;
+  stroke-width:2;
+  stroke-dasharray:5 4;
+}
+
+@media(max-width:980px){
+  .lab-topology-frame{
+    overflow-x:auto;
+    scrollbar-width:thin;
+    scrollbar-color:rgba(34,211,238,.28) transparent;
+  }
+}
